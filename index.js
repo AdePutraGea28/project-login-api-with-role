@@ -8,7 +8,9 @@ mongoose.connect('mongodb://localhost:27017/user_role_db', {
 });
 const db = mongoose.connection;
 db.on('error', (erro) => console.error(error));
-db.once('open', () => console.log('Database Connected...'));
+db.once('open', async () => {
+    
+});
 
 // middleware
 app.use(express.json());
